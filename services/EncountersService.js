@@ -11,6 +11,7 @@ module.exports = {
     //encounter = JSON.parse(JSON.stringify(body));
     //let dr  = subjective.rendering; 
     //Object.assign(encounter,body);
+    
     console.log("--------------------")
     nestedObjectAssign(encounter,JSON.parse(JSON.stringify(body)));
     console.log(nestedObjectAssign(encounter,JSON.parse(JSON.stringify(body))))
