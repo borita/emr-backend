@@ -6,12 +6,15 @@ console.log("definio schema");
 const EncountersSchema =new Schema({
     schedule: {
         type: Date, required: false
-    }, subjetive: {
+    }, 
+    subjetive: {
         rendering: {
             type: String, required: true
-        }, chiefComplaint: {
+        },
+        chiefComplaint: {
             type: String, required: true
-        }, gastroIntestinal: {
+        },
+        gastroIntestinal: {
             abdominalPain: {
                 howLongHaveYouHadAbdominalPain: {
                     type: String, enum: [
@@ -19,7 +22,8 @@ const EncountersSchema =new Schema({
                         "1-3 Days",
                         "4-7 Days"
                     ]
-                }, whereIsYourAbdominalPainLocated: {
+                }, 
+                whereIsYourAbdominalPainLocated: {
                     type: String, enum: [
                         "Entire Abdomen",
                         "Upper Abdomen",
@@ -27,60 +31,70 @@ const EncountersSchema =new Schema({
                         "Left Abdomen",
                         "Right Abdomen"
                     ]
-                }, doesThePainRadiateOfMoveToAnotherLocation: {
+                }, 
+                doesThePainRadiateOfMoveToAnotherLocation: {
                     type: String, enum: [
                         "No",
                         "Yes"
                     ]
-                }, DidYourAbdominalPainStartAllOfASuddenOrDidItComeOnSlowly: {
+                }, 
+                DidYourAbdominalPainStartAllOfASuddenOrDidItComeOnSlowly: {
                     type: String, enum: [
                         "Suddlendly",
                         "Slowly"
                     ]
-                }, DoesYourAbdominalPainOccurAfterEating: {
+                }, 
+                DoesYourAbdominalPainOccurAfterEating: {
                     type: String, enum: [
                         "No",
                         "Yes"
                     ]
                 }
-            }, diarrhea: {
+            }, 
+            diarrhea: {
                 HowLongHaveYouHadYourDiarrheaSymptoms: {
                     type: String, enum: [
                         "0-24 Hours",
                         "1-3 Days",
                         "4-7 Days"
                     ]
-                }, HaveYouHadAFeverWithYourDiarrhea: {
+                }, 
+                HaveYouHadAFeverWithYourDiarrhea: {
                     type: String, enum: [
                         "No",
                         "Yes"
                     ]
-                }, HowWouldYouDescribeTheSeverityOfYourSymptoms: {
+                }, 
+                HowWouldYouDescribeTheSeverityOfYourSymptoms: {
                     type: String, enum: [
                         "Mild",
                         "Moderate",
                         "Severe"
                     ]
-                }, HowHaveYourSymptomsChangedSinceTheyStarted: {
+                }, 
+                HowHaveYourSymptomsChangedSinceTheyStarted: {
                     type: String, enum: [
                         "Better",
                         "The Same",
                         "Worse"
                     ]
                 }
-            }, vomiting: {
+            }, 
+            vomiting: {
                 HowLongHaveYouHadYourVomitSymptoms: {
                     type: String, enum: [
                         "0-24 Hours",
                         "1-3 Days",
                         "4-7 Days"
                     ]
-                }, HaveYouHadAFeverWithYourVomit: {
+                }, 
+                HaveYouHadAFeverWithYourVomit: {
                     type: String, enum: [
                         "No",
                         "Yes"
                     ]
-                }, WhenDoesTheVomitingOccur: {
+                }, 
+                WhenDoesTheVomitingOccur: {
                     type: String, enum: [
                         "Before Meals",
                         "During the Meals",
@@ -96,22 +110,26 @@ const EncountersSchema =new Schema({
                         "1-3 Days",
                         "4-7 Days"
                     ]
-                }, HaveYouHadAFever: {
+                }, 
+                HaveYouHadAFever: {
                     type: String, enum: [
                         "No",
                         "Yes"
                     ]
-                }, HaveYouHadAHeadache: {
+                }, 
+                HaveYouHadAHeadache: {
                     type: String, enum: [
                         "No",
                         "Yes"
                     ]
-                }, DidYourSymptomsStartSuddenlyOrComeOnSlowly: {
+                }, 
+                DidYourSymptomsStartSuddenlyOrComeOnSlowly: {
                     type: String, enum: [
                         "Suddlendly",
                         "Slowly"
                     ]
-                }, HaveYouHadARunnyNose: {
+                }, 
+                HaveYouHadARunnyNose: {
                     type: String, enum: [
                         "No",
                         "Yes"
@@ -124,17 +142,20 @@ const EncountersSchema =new Schema({
                         "1-3 Days",
                         "4-7 Days"
                     ]
-                }, HaveYouHadACough: {
+                }, 
+                HaveYouHadACough: {
                     type: String, enum: [
                         "No",
                         "Yes"
                     ]
-                }, DoYouHaveASoreThroat: {
+                }, 
+                DoYouHaveASoreThroat: {
                     type: String, enum: [
                         "No",
                         "Yes"
                     ]
-                }, DoYourSymptomsAffectYourSleep: {
+                }, 
+                DoYourSymptomsAffectYourSleep: {
                     type: String, enum: [
                         "No",
                         "Yes"
@@ -145,17 +166,23 @@ const EncountersSchema =new Schema({
     }, objective: {
         HighPressure: {
             type: Number
-        }, LowPressure: {
+        }, 
+        LowPressure: {
             type: Number
-        }, Pulse: {
+        }, 
+        Pulse: {
             type: Number
-        }, Temperature: {
+        }, 
+        Temperature: {
             type: Number
-        }, Height: {
+        }, 
+        Height: {
             type: Number
-        }, Weight: {
+        }, 
+        Weight: {
             type: Number
-        }, BMI: {
+        }, 
+        BMI: {
             type: Number
         }
 
