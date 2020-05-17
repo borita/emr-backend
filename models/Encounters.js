@@ -3,6 +3,26 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 console.log("definio schema");
 
+const PatientsSchema =new Schema({
+    name: {
+        type: String, required: true
+    },
+    lastName: {
+        type: String, required: true
+    },
+    dob: {
+        type: Date, required: true
+    },
+    sex: {
+        type: String, enum: [
+            "F",
+            "M"
+        ]
+    },
+}
+)
+
+
 const EncountersSchema =new Schema({
     schedule: {
         type: Date, required: false
@@ -187,13 +207,13 @@ const EncountersSchema =new Schema({
         }
 
     },
+    pt : PatientsSchema,
     is_Active: {
         type: Boolean,
         default: true
-      }
+    }
 }); 
 
 const Encounters = mongoose.model('Encounter', EncountersSchema);
 
 module.exports = Encounters;
-
