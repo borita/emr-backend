@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const EncountersController = require('../controller/EncountersController');
+const { EncountersController } = require('../controller');
+//const EncountersController = require('../controller/EncountersController');
 // middleware that is specific to this router
 // router.use( (req, res, next) => {
 //   console.log('Time: ', Date.now());
