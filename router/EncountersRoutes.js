@@ -9,18 +9,18 @@ const { EncountersController } = require('../controller');
 // });
 
 // CREATE
-router.post('/Encounters', EncountersController.create);
+router.post('/encounters', EncountersController.create);
 
 // GET (ALL)
-router.get('/Encounters', EncountersController.find);
+router.get('/encounters', EncountersController.find);
 
 // GET (ONE)
-router.get('/Encounters/:id', EncountersController.findById);
+router.get('/encounters/:id', EncountersController.findById);
 
 // UPDATE
-router.patch('/Encounters/:id', EncountersController.findByIdAndUpdate);
+router.patch('/encounters/:id', EncountersController.findByIdAndUpdate);
 
 // DELETE
-router.delete('/Encounters/:id', EncountersController.findByIdAndDelete);
+router.delete('/encounters/:id', EncountersController.findByIdAndDelete);
 
 module.exports = router;
