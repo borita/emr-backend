@@ -1,4 +1,5 @@
 const { UsersService } = require('../services');
+const utils = require('../utils');
 
 module.exports = {
     create: async (req, res) => {
@@ -56,7 +57,22 @@ module.exports = {
             res.status(400).send({ message: 'Error signin up', err });
         }
     },
-    login: async (req, res) =>  {
-        //TODO Implementar login
+    login: async (req, res) => {
+        const { email, password } = req.body;
+        try {
+            const user = await UsersService.findByEmail(email);
+            if (!user) res.status(404).send({ message: 'User not found' });
+            const isMatch = UsersService.comparePasswords(password, user.password);
+            if (!isMatch) res.status(400).send({ message: 'Invalid credentials' });
+            const token = utils.createToken({
+                id: user._id,
+                name: user.first_name,
+                email: user.email,
+            });
+            res.status(200).send({ message: "step inside, brother", token });
+        } catch (error) {
+            console.log(error);
+            res.status(400).send({ message: 'Error on login', error });
+        }
     }
 }
