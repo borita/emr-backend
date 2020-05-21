@@ -1,7 +1,5 @@
-console.log("entro al schema");
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-console.log("definio schema");
 
 const PatientsSchema =new Schema({
     name: {

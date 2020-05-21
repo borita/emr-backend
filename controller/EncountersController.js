@@ -8,7 +8,6 @@ module.exports = {
       .catch(err => res.status(400).send({ message: 'Error creating user', err }));
   },
   find: (req, res) => {
-      console.log("probando get")
     EncountersService.find()
       .then(encounters => res.status(200).send(encounters))
       .catch(err => res.status(404).send({ message: 'Encounters not found', err }));
