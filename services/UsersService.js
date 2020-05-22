@@ -6,7 +6,7 @@ module.exports = {
     const newUser = new Users(body);
     return newUser.save();
   },
-  find: () => Users.find({ is_active: true }),
+  find: () => Users.find({ is_Active: true }),
   findById: (id) => Users.findById(id),
   findByEmail: (email) => Users.findOne({ email }),
   update: (user, body) => {
