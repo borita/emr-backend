@@ -32,8 +32,8 @@ module.exports = {
   findByIdAndDelete: async (req, res) => {
     const { id } = req.params;
     try {
-      const user = await EncountersService.findById(id);
-      await EncountersService.update(encounter, { is_active: false })
+      const encounter = await EncountersService.findById(id);
+      await EncountersService.update(encounter, { is_Active: false })
       res.status(204).send(); 
     } catch (error) {
       res.status(404).send({ message: "Error deleting user", error });
